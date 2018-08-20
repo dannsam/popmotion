@@ -300,7 +300,7 @@ export class PoserFLIP extends React.Component {
           list: this.state.list === this.a ? this.b : this.a
         });
       });
-    }, 5000);
+    }, 2000);
   }
 
   componentWillUnmount() {

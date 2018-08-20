@@ -108,6 +108,44 @@ export class PoseKeyFail extends React.Component {
   }
 }
 
+const FlipBox = posed(BoxStyled)({
+  open: {
+    flip: true,
+    width: "200px",
+    preTransition: () => { console.log('preTransition: open') },
+    transition: {
+      duration: 5000
+    }
+  },
+  closed: {
+    flip: true,
+    width: "2px",
+    preTransition: () => { console.log('preTransition: closed') },
+    transition: {
+      duration: 5000
+    }
+  }
+});
+
+export class PoseOptInFlip extends React.Component {
+  state = { open: false };
+
+  // componentDidMount() {
+  //   setInterval(
+  //     () =>
+  //       this.setState(s => ({
+  //         open: !s.open
+  //       })),
+  //     6000
+  //   );
+  // }
+
+  render() {
+    // return <FlipBox pose={this.state.open ? 'open' : 'closed'} />;
+    return <FlipBox initialPose="closed" pose="open" />;
+  }
+}
+
 const sidebarProps = {
   dragBounds: { left: -100, right: 0 },
   open: {

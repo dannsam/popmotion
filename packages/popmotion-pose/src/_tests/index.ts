@@ -67,7 +67,7 @@ test('named transition definition with custom to', () =>
 //   }
 // });
 
-test('delay transition', done => {
+test('delay transition', (done) => {
   setTimeout(() => {
     // Is animating to rgba(238, 238, 238, 1)
     expect(poser.get('backgroundColor').get()).toBe('rgba(0, 0, 0, 1)');

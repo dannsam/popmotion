@@ -11,15 +11,16 @@ import {
   PoseOpacity,
   PoseFullScreenFlip
 } from "./plugins/pose";
-// import {
-//   ReactPose,
-//   ReactPoseChildren,
-//   Group,
-//   EmailList,
-//   UserPoseInPoseGroup,
-//   PoseKey,
-//   PoseKeyFail
-// } from "./plugins/react-pose";
+import {
+  ReactPose,
+  ReactPoseChildren,
+  Group,
+  EmailList,
+  UserPoseInPoseGroup,
+  PoseKey,
+  PoseKeyFail,
+  PoseOptInFlip
+} from "./plugins/react-pose";
 
 storiesOf("Plugin: Pose", module)
   .add("pose", () => <PoseDOM />)
@@ -30,14 +31,15 @@ storiesOf("Plugin: Pose", module)
   .add("opacity", () => <PoseOpacity />)
   .add("full screen flip", () => <PoseFullScreenFlip />);
 
-// storiesOf("Plugin: React Pose", module)
-//   .add("pose", () => <ReactPose />)
-//   .add("children", () => <ReactPoseChildren />)
-//   .add("group", () => <Group />)
-//   .add("email list", () => <EmailList />)
-//   .add("user-defined poses within PoseGroup", () => <UserPoseInPoseGroup />)
-//   .add("pose key test", () => <PoseKey />)
-//   .add("pose key fail test", () => <PoseKeyFail />);
+storiesOf("Plugin: React Pose", module)
+  .add("pose", () => <ReactPose />)
+  .add("children", () => <ReactPoseChildren />)
+  .add("group", () => <Group />)
+  .add("email list", () => <EmailList />)
+  .add("user-defined poses within PoseGroup", () => <UserPoseInPoseGroup />)
+  .add("pose key test", () => <PoseKey />)
+  .add("pose key fail test", () => <PoseKeyFail />)
+  .add("pose opt-in flip", () => <PoseOptInFlip />);
 
 // import { Decay, DecayModifyTarget, DecayPower, DecayTimeConstant } from './decay';
 // import { Keyframes, KeyframesDuration, KeyframesLoop, KeyframesLinear, KeyframesTimes } from './keyframes';
