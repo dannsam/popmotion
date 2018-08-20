@@ -66,11 +66,9 @@ class PoseGroup extends React.Component<Props, State> {
   };
 
   removeFromChildren(key: string) {
-    const { children } = this.state;
-
-    this.setState({
+    this.setState(({children}) => ({
       children: removeFromChildren(children, key)
-    });
+    }));
   }
 
   shouldComponentUpdate(nextProps: Props, nextState: State) {
